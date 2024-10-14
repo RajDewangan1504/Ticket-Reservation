@@ -8,7 +8,7 @@ app.use(cors());
 const PORT = process.env.PORT || 3001;
 
 // MongoDB connection
-mongoose.connect(process.env.MONGO_URL,).then(() => console.log('Connected to MongoDB')).catch(err => console.log(err));
+mongoose.connect( 'mongodb+srv://swayamkumarkarn:swayamkumarkarn@cluster0.regs5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/trainSeats',).then(() => console.log('Connected to MongoDB')).catch(err => console.log(err));
 
 const seatSchema = new mongoose.Schema({
   seatNumber: Number,
