@@ -81,7 +81,7 @@ export default function Home() {
       )}
 
       <div className="mb-8">
-        <h3 className="text-2xl font-semibold text-center mb-4">Seat Availability</h3>
+        <h3 className="text-2xl font-semibold text-center mb-4 text-white">Seat Availability</h3>
         <div className="grid grid-cols-7 gap-4 mx-auto max-w-xl">
           {seats.map((seat) => (
             <div
