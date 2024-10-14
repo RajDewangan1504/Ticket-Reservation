@@ -56,10 +56,10 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-black p-8">
-      <h1 className="text-4xl font-bold text-center text-blue-600 mb-8">Train Seat Booking System</h1>
+      <h1 className="text-4xl font-bold text-center text-white mb-8">Train Seat Booking System</h1>
 
       <div className="flex justify-center items-center mb-6">
-        <label className="text-lg mr-4 font-medium">Number of seats to book:</label>
+        <label className="text-lg mr-4 font-medium text-white">Number of seats to book:</label>
         <input
           type="number"
           className="w-16 p-2 border-2 border-gray-300 rounded-lg text-center text-black"
