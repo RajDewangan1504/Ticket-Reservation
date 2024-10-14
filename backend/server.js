@@ -115,6 +115,11 @@ app.post('/reset-seats', async (req, res) => {
   }
 });
 
+// 404 Not Found middleware (must be after all other routes)
+app.use((req, res, next) => {
+  res.status(404).json({ message: '404 Not Found' });
+});
+
 // Starting the server
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
