@@ -9,7 +9,7 @@ export default function Home() {
   // Fetch the seat data using fetch API
   const fetchSeats = async () => {
     try {
-      const response = await fetch('http://localhost:3001/view-seats');
+      const response = await fetch('https://ticket-reservation-backend.vercel.app/view-seats');
       const data = await response.json();
       setSeats(data);
     } catch (error) {
@@ -20,7 +20,7 @@ export default function Home() {
   // Handle seat booking using fetch API
   const handleBooking = async () => {
     try {
-      const response = await fetch('http://localhost:3001/book-seats', {
+      const response = await fetch('https://ticket-reservation-backend.vercel.app/book-seats', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -38,7 +38,7 @@ export default function Home() {
   // Handle seat reset using fetch API
   const handleReset = async () => {
     try {
-      const response = await fetch('http://localhost:3001/reset-seats', {
+      const response = await fetch('https://ticket-reservation-backend.vercel.app/reset-seats', {
         method: 'POST',
       });
       const data = await response.json();
