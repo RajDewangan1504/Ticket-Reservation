@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const PORT = process.env.PORT || 3001;
+const PORT = 9010;
 
 // MongoDB connection
 mongoose.connect( 'mongodb+srv://swayamkumarkarn:swayamkumarkarn@cluster0.regs5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/trainSeats',).then(() => console.log('Connected to MongoDB')).catch(err => console.log(err));
@@ -113,6 +113,11 @@ app.post('/reset-seats', async (req, res) => {
     console.error("Error resetting seats:", error);  // Debugging log
     return res.status(500).json({ message: 'Error resetting seats.' });
   }
+});
+
+// 404 Not Found middleware (must be after all other routes)
+app.use((req, res, next) => {
+  res.status(404).json({ message: '404 Not Found' });
 });
 
 // Starting the server
